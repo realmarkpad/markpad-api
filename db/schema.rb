@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_08_02_203803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "documents", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "content"
+    t.bigint "parent_document_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_documents_on_name"
+    t.index ["parent_document_id"], name: "index_documents_on_parent_document_id"
+  end
+
+  add_foreign_key "documents", "documents", column: "parent_document_id", on_delete: :cascade
 end
