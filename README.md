@@ -1,24 +1,23 @@
-# README
+<p align="center">
+  <a href="https://markpad.com.br" target="_blank" rel="noopener noreferrer">
+    <img alt="Logo" src="src/assets/cat-logo.png" width="200px">
+  </a>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT Licence"></a>
+</p>
 
-Things you may want to cover:
+API for markpad, a notepad in the web with markdown.
 
-* Ruby version
+## Project setup
 
-* System dependencies
+```
+bundle install
+```
 
-* Configuration
+### Database setup
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails db:create db:migrate
+```
