@@ -21,6 +21,7 @@ gem 'redis', '~> 4.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 # For env variables
 gem 'figaro'
 
@@ -35,6 +36,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # For  tests
   gem 'rspec-rails', '~> 4.0.1'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
